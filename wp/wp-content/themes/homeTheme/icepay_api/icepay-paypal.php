@@ -1,0 +1,30 @@
+<?php
+/**
+* ICEPAY Library for PHP
+* (c) 2011 ICEPAY
+*
+* This file contains the ICEPAY Library for PHP.
+*
+* @author ICEPAY.eu (support@icepay.eu)
+* @version 1.0
+*/
+// require 'icepay.php';
+
+class ICEPAY_PayPal extends ICEPAY
+{
+	public function Pay( $country = NULL, $currency = NULL, $amount = NULL, $description = NULL )
+	{
+		$this->assignIssuer		= "DEFAULT";
+		$this->country			= $country;
+		$this->assignLanguage	= "EN";
+		$this->assignCurrency	( $currency );
+		$this->assignAmount		( $amount );
+		$this->description		= $description;
+		$this->paymentMethod	= "PAYPAL";
+
+		return $this->postRequest( $this->basicMode(), $this->prepareParameters() );
+	}
+	
+}
+
+?>

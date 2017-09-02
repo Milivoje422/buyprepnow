@@ -1,0 +1,44 @@
+ICEPAY API Library for PHP Changelog
+====================================
+
+Version 1.1.2 (20-February-2011) []
+	- Added MrCash Class (icepay-mrcash.php)
+	- Removed Wallie Class
+
+Version 1.1.0 (18-May-2011) [bd78b04fb27b8e75214957d29513309c98eab509]
+	- Added PayPal Class (icepay-paypal.php)
+
+Version 1.0.9 (31-january-2011) [28a4e1b698c24c563da33fafc90d6f690f610cc4]
+	- Removed icepay-fasterpay.php, the paymentmethod is no longer supported by ICEPAY
+	- Added icepay-paysafecard.php
+	- Altered Fingerprint files array
+	- Added functions to retrieve the current API version and ID
+	
+Version 1.0.8 (28-july-2010)
+	- Altered the internal handling of the Pay method within the ICEPAY main class
+	- Added declaration of object variables
+
+Version 1.0.7 (9-june-2010)
+	- Added OnError public function
+
+Version 1.0.6 (14-may-2010)
+	- Altered generateChecksumForPage() function, now checks the merchantID from GET data instead of MerchantID set through
+	- Altered generateChecksumForPostback() function, now checks the merchantID from POST data instead of set MerchantID
+	- Added data content checks in OnPostback() and GetData() to prevent php errors.
+
+Version 1.0.5.2 (4-dec-2009)
+	- Added parameters to the http_build_query function to ensure it works with all php.ini settings
+
+Version 1.0.5.1 (16-nov-2009)
+	- Included SetStreamMethod public function. Supported parameters are: fopen(default), cURL, file_get_contents.
+	- Availability of fopen/cURL/file_get_contents is now checked within postRequest function.
+	- Included SetApiURL public function.
+
+Version 1.0.5 (24-sep-2009)
+    - Removed internal amount, currency, language and issuer restrictions in library code.
+	- Removed several parameters from the 'ICEPAY_Fasterpay' class method 'Pay' such as the country, language, etc.
+	  Since the FasterPay payment method only accepts payments from the Great Britain, there is no need for these parameters.
+	  Also, this is to make it as it should be (i.e. in sync with the .NET version).
+    
+Version 1.0.4 (5-aug-2009)
+    - Changed the method SetOrderID from private to public

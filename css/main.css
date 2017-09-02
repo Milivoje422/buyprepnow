@@ -1,0 +1,211 @@
+/*
+  Theme Name: Home made theme 
+  Theme URI: http://alecadddd.com
+  Author: Milivoje Ivic
+  Author: URI: http:://www.google.com
+  Description: This is custom home made theme
+  Version: 1.0.0 alpha
+  License: GNU General Public License v2 or later
+  License: URI: http://www.google.com
+  Tags: black. white, responsive, one-column, two-column, featured-images, custom-menu,  custom-header, post-formats
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Normalize
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigation
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Widgets
+ * 11.0 - Content
+ * 11.1 - Header
+ * 11.2 - Posts and pages
+ *    11.3 - Post Formats
+ *    11.4 - Comments
+ *    11.5 - Sidebar
+ *    11.6 - Footer
+ * 12.0 - Media
+ *    12.1 - Captions
+ *    12.2 - Galleries
+ * 13.0 - Multisite
+ * 14.0 - Media Queries
+ *    14.1 - >= 710px
+ *    14.2 - >= 783px
+ *    14.3 - >= 910px
+ *    14.4 - >= 985px
+ *    14.5 - >= 1200px
+ * 15.0 - Print
+ */
+
+
+/**
+ * 1.0 - Normalize
+ *
+ * Normalizing styles have been helped along thanks to the fine work of
+ * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ */
+
+
+
+
+
+  .main_white_background{ background: white; width: 100%; }
+
+  .top_header { width: 100%; }
+  .top_header img { margin: 10px 0px 0px 37px; width: 125px; }
+  .top_header button { position: absolute; right: 10px; top: 35px; display: none; background-color: white; border: 1px solid #328dcc; }
+  .top_header button .icon-bar { background: #328dcc; }
+
+  .main_navbar { width: 100%; position: relative; }
+  .main_navbar ul { list-style-type: none; margin: auto; }
+  .main_navbar ul li { float: left; }
+  .main_navbar ul li a{ padding: 15px 14px; color: white; font-size: 18px; text-decoration: none; transition: all 500ms; }
+  .main_navbar ul li a:hover { background: white; color: #54a1d9; }
+
+  .mobile_main_bar { background: #328dcc; }
+  .mobile_main_bar ul li { color: white; }
+  .mobile_main_bar ul li a{ color: white; }
+  .nav>li>a:focus, .nav>li>a:hover { text-decoration: none; background-color: #54a1d9; }
+  .nav .open>a, .nav .open>a:focus, .nav .open>a:hover { background-color: rgba(255, 255, 255, 0.32); border-color: #045ca7; }
+
+  .navber_items_line { position: relative; background: #54a1d9; width: 95%; }
+  .navber_items_line ul { width: 80%; margin: 0; padding: 13px 0px 13px 0; height: 50px; }
+  .navber_items_line .lines_colors { position: absolute; width: 85%; }
+
+  .curved { 
+    position: absolute;
+    right: 0;
+    top: -18px;
+    width: 270px;
+    height: 70px;
+    background: #54a1d9;
+    box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 100px 50px 50px 0px;
+    -moz-border-radius: 100px 50px 50px 0px;
+    -webkit-border-radius: 100px 50px 50px 0px;
+    -webkit-box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75); }
+    .curved p { float: left; text-align: left; margin: 16px 10px 5px 48px; display: table-cell; vertical-align: middle; font-size: 16px; color: white; }
+    .curved p span { font-size: 11px; }
+    .curved i {
+      display: table-cell;
+      vertical-align: middle;
+      float: right;
+      font-size: 2.0em;
+      padding: 8px 19px;
+      border-radius: 100%;
+      background-color: #fff;
+      color: #54a2d9;
+      margin-top: 7px;
+      margin-right: 7px;
+      box-shadow: inset -2px 0px 2px 0px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .mobile_main_bar { display: none; }
+
+  .lines_colors { position: relative; height: 2px; width: 100%; }
+  #line_1, #line_2, #line_3,
+  #line_4, #line_5, #line_6{ height: 2px; float: left; }
+
+  #line_1 { width: 16.66666666666667%; background: #ed2024; }
+  #line_2 { width: 16.66666666666667%; background: #f8991d; }
+  #line_3 { width: 16.66666666666667%; background: #f6eb14; }
+  #line_4 { width: 16.66666666666667%; background: #0d9a48; }
+  #line_5 { width: 16.66666666666667%; background: #3953a4; }
+  #line_6 { width: 16.66666666666667%; background: #c5268f; }
+  
+  .main_title_text { width: 413px; }
+  .main_title_text h2{ font-size: 33px; font-weight: 700; margin-bottom: 2px; color: #328dcc; }
+
+  .main_content_text { margin-top: 10px; }
+  .main_content_text p { font-size: 22px; color: #328dcc; }
+  .contact_section h4 { text-align: center; text-transform: uppercase; font-size: 44px; color: #328dcc; font-weight: 600; margin-top: 20px; }
+
+  .contact_box { margin-top: 40px; background: #a6d6f3; padding: 100px 25px 80px 25px; border-radius: 17px; position: relative; }
+  .contact_box .form-control { border-radius: 11px; margin-top: 12px; }
+
+  .contact_box .form-control::-webkit-input-placeholder { color: #0f2933; font-weight: 700; } /* WebKit, Blink, Edge */
+  .contact_box .form-control:-moz-placeholder { color: #0f2933; opacity: 1; font-weight: 700; } /* Mozilla Firefox 4 to 18 */
+  .contact_box .form-control::-moz-placeholder { color: #0f2933; opacity: 1; font-weight: 700;} /* Mozilla Firefox 19+ */
+  .contact_box .form-control:-ms-input-placeholder { color: #0f2933; font-weight: 700; } /* Internet Explorer 10-11 */
+  .contact_img_png { position: absolute; left: 10%; width: 138px; top: -10px; }
+  .contact_section { margin-bottom: 50px; }
+
+  .image_to_top { height: 50px; }
+  .image_to_top p{ float: right; margin-right: 30px; color: #54a1d8; font-weight: 500; }
+  .image_to_top p img { width: 50px; }
+
+  .footer_layout { height: 170px; background: #54a1d9; }  
+  .bottom_bar { width: 100%; }
+  .bottom_bar ul { list-style-type: none; margin: auto; padding: 20px 0 10px 0px; width: 533px; font-size: 30px; color: white; }
+  .bottom_bar ul li { display: inline; display: -web-inline; margin-left: 1px; margin-left: 33px; }
+  .bottom_bar ul li a { color: white; text-decoration: none;}
+
+  .social_media_buttons {  }
+  .social_media_buttons ul { list-style-type: none; margin: auto; width: 76px; padding: 0; }
+  .social_media_buttons ul li { display: inline; }
+  .social_media_buttons ul li a img { width: 36px; }
+
+  .credit { width: 100%; margin: 14px 0px; }
+  .credit p { font-size: 24px; color: white; width: 472px; margin: auto; }
+
+
+
+  @media(max-width: 1199px){
+    .contact_section h4 { font-size: 37px; }
+  }
+  @media(max-width: 1000px){
+    .curved p { display: none; }
+    .curved { 
+    top: -12px;
+    width: 67px;
+    box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    -webkit-box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 6px 10px -4px rgba(0, 0, 0, 0.75);
+    }
+    .navber_items_line .lines_colors { width: 100%; }
+    .navber_items_line ul { width: 100%; }
+    .main_navbar ul li a { padding: 17px 14px; color: white; font-size: 15px; }
+  }
+  @media(max-width: 991px){
+    .contact_section h4 { font-size: 28px; }
+  }
+  @media(max-width: 710px){
+    .top_header img { display: block; margin: 10px auto; } 
+    .main_navbar { display: none; }
+    .mobile_main_bar { display: block; }
+    .top_header button { display: block; }
+  }
+  @media(max-width: 550px){
+    .bottom_bar ul { width: 324px; font-size: 20px; }
+    .bottom_bar ul li { margin-left: 5%; }
+    .credit p { font-size: 16px; width: 312px; }
+  }
+  @media(max-width: 545px){
+    .main_title_text    { width: 100%; }
+    .main_title_text h2 { font-size: 6.2vw; }
+    .main_content_text p { font-size: 17px; }
+    .contact_section h4 { font-size: 20px; }
+  }
+
+  @media(max-width: 400px){
+    .main_content_text p { font-size: 14px; }
+  }
+
+  @media(max-width: 350px){
+    .bottom_bar ul { width: 280px; font-size: 16px; } 
+    .credit p { font-size: 14px; width: 276px; }
+  }
